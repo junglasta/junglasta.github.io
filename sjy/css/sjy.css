@@ -1,0 +1,168 @@
+*{
+    font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+.d-none{ display: none !important; }
+
+.h0{
+    height: 0 !important; overflow: hidden !important;
+    margin: 0 !important; padding: 0 !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+body{
+    background-color: #f6f6f6
+}
+
+.navbar-inverse{
+    background-color: #e24844;
+}
+
+/* -------------------------스와이퍼-------------------------------- */
+
+
+#mainBanner{
+    background-image: url(../img/pc_banner_1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto calc(100% - 10rem); /* 높이 기준으로 x축 auto, y축 calc */    
+
+    max-height: 717px; /* 이미지 실제 세로길이 for 데스크탑. 넘으면 픽셀 터짐! */
+    height: 0;
+    padding-top: 70%; /* 모바일은 PC 사이즈의 60%로 줄어든다 */
+    background-color: #f6f6f6;
+}
+
+#mainBanner2{
+    background-image: url(../img/pc_banner_2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto calc(100% - 10rem); /* 높이 기준으로 x축 auto, y축 calc */    
+
+    max-height: 717px; /* 이미지 실제 세로길이 for 데스크탑. 넘으면 픽셀 터짐! */
+    height: 0;
+    padding-top: 70%; /* 모바일은 PC 사이즈의 60%로 줄어든다 */
+    background-color: #f6f6f6;
+}
+
+/* -------------------------스와이퍼-------------------------------- */
+
+
+
+
+/* 모바일을 위한 CSS 스타일 *//* 화면 너비가 992px 이하일 때 */
+
+/* 데스크탑을 위한 미디어쿼리 *//* 화면 너비가 992px 이상일 때 */
+@media (min-width: 992px){
+    #mainBanner{
+        background-size: contain; /* 자기 원래 사이즈 지켜라 */    
+        height: 717px;
+        padding-top: 0;
+    }  
+}
+/* -------------------------------- */
+#adBanner{
+    background-image: url(../img/mobile_1.png);
+    background-repeat: no-repeat;
+    background-color: #d0f5e4;
+    background-position: center;
+    background-size: 100% auto; /* x축(width) 100_디바이스에 맞추고 / y축(높이) auto 맘대로 계산해 */
+    
+}
+
+aside.cta-quote {
+    padding: 50px 0 80vw;
+}
+
+@media (min-width: 768px){
+    aside.cta-quote {
+        padding: 100px 0;
+    }
+    #adBanner{
+        background-position: right center;
+        background-size: auto 522px; /* 원래 이미지 사이즈 px 지정 */
+    }
+}
+
+@media (min-width: 992px){
+    aside.cta-quote {
+        padding: 200px 0px;
+    }
+    #adBanner{
+        
+    }
+}
+
+/* --------------------------- */
+/* --------------------------- */
+
+.portfolio-filter{display: block;}
+.portfolio-filter #filters li{display: block;}
+
+.portfolio-filter #filters li .filter{
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.float-none{
+    float:none !important;
+}
+.mx-auto{
+    margin: 0 auto;
+}
+
+.project-details{
+    opacity: 0;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* -------------------------------- */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: transparent;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar-default .navbar-nav >  li > a:after,
+.navbar-default .navbar-nav >  li > a:hover:after,
+.navbar-default .navbar-nav >  li > a:focus:after,
+.navbar-inverse .navbar-nav >  li > a:after,
+.navbar-inverse .navbar-nav >  li > a:hover:after,
+.navbar-inverse .navbar-nav >  li > a:focus:after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 0; margin: auto;
+    left: 0; 
+    right: 0;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+
+    transition: 0.3s;
+}
+
+.navbar-default .navbar-nav >  .active > a:after,
+.navbar-default .navbar-nav >  .active > a:hover:after,
+.navbar-default .navbar-nav >  .active > a:focus:after,
+.navbar-inverse .navbar-nav >  .active > a:after,
+.navbar-inverse .navbar-nav >  .active > a:hover:after,
+.navbar-inverse .navbar-nav >  .active > a:focus:after {
+    width: 100%;
+}
